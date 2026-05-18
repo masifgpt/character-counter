@@ -3,8 +3,8 @@
 AnalyticsText is a modern, responsive, portfolio-grade front-end text processor application engineered using strict semantic HTML5 structural components, modern CSS variables styling layouts, and robust Vanilla JavaScript processing architecture. It updates analytics data in real time, offering critical data insights for writers, copywriters, and software developers.
 
 ## 🚀 Live Links & Portfolios
-- **Live Deployment Preview**: [Vercel / Netlify / GitHub Pages Live URL Link]
-- **GitHub Repository**: [Your GitHub Profile URL Path]
+- **Live Deployment Preview**: [(https://charactercounterrrrr.netlify.app/)]
+- **GitHub Repository**: [(https://github.com/masifgpt)]
 
 ## ✨ Advanced System Features
 - **Comprehensive Real-Time Metrics**: Instantly computes comprehensive character counts, string spacing exclusions, words, sentences, and paragraphs layouts.
