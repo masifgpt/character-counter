@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnalyticsText // Premium Character Counter & Text Analyzer</title>
+    <meta name="description" content="A professional, real-time text analysis tool tracking characters, words, sentences, and estimated reading time.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="app-header">
+        <div class="header-container">
+            <div class="brand">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+                <h1>AnalyticsText<span class="dot">.</span></h1>
+            </div>
+            <div class="header-actions">
+                <span id="current-date" class="current-date"></span>
+                <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme" title="Toggle Light/Dark Mode">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Layout -->
+    <main class="main-container">
+        
+        <!-- Metrics Dashboard Grid -->
+        <section class="metrics-grid" aria-label="Text Statistics">
+            <div class="metric-card" data-stat="characters">
+                <div class="card-icon"><i class="fa-solid fa-font"></i></div>
+                <div class="card-info">
+                    <span class="stat-label">Total Characters</span>
+                    <span id="char-count" class="stat-value">0</span>
+                </div>
+            </div>
+            
+            <div class="metric-card" data-stat="words">
+                <div class="card-icon"><i class="fa-solid fa-t"></i></div>
+                <div class="card-info">
+                    <span class="stat-label">Words</span>
+                    <span id="word-count" class="stat-value">0</span>
+                </div>
+            </div>
+
+            <div class="metric-card" data-stat="sentences">
+                <div class="card-icon"><i class="fa-solid fa-quote-left"></i></div>
+                <div class="card-info">
+                    <span class="stat-label">Sentences</span>
+                    <span id="sentence-count" class="stat-value">0</span>
+                </div>
+            </div>
+
+            <div class="metric-card" data-stat="paragraphs">
+                <div class="card-icon"><i class="fa-solid fa-paragraph"></i></div>
+                <div class="card-info">
+                    <span class="stat-label">Paragraphs</span>
+                    <span id="paragraph-count" class="stat-value">0</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Advanced Insights (Reading Time / Density) -->
+        <section class="insights-bar">
+            <div class="insight-item">
+                <i class="fa-regular fa-clock"></i>
+                <span>Reading Time: <strong id="reading-time">0 min</strong></span>
+            </div>
+            <div class="insight-divider"></div>
+            <div class="insight-item">
+                <i class="fa-solid fa-bolt"></i>
+                <span>Space Status: <strong id="space-status">0 Spaces excluded</strong></span>
+            </div>
+        </section>
+
+        <!-- Editor Workstation Area -->
+        <section class="editor-workspace">
+            <div class="workspace-header">
+                <h2>Text Workspace</h2>
+                <div class="workspace-options">
+                    <label class="toggle-switch" title="Auto-save text locally">
+                        <input type="checkbox" id="autosave-toggle" checked>
+                        <span class="slider"></span>
+                        <span class="toggle-label">Auto-Save</span>
+                    </label>
+                </div>
+            </div>
+
+            <div class="textarea-wrapper">
+                <textarea 
+                    id="text-input" 
+                    placeholder="Type, paste, or craft your content here..." 
+                    spellcheck="true"
+                    aria-label="Text to analyze"
+                ></textarea>
+                <div id="empty-state" class="empty-state">
+                    <i class="fa-solid fa-keyboard/empty-icon"></i>
+                    <p>Your workspace is clean. Start typing to view real-time data metrics.</p>
+                </div>
+            </div>
+
+            <!-- Utility Action Controls -->
+            <div class="action-toolbar">
+                <div class="transform-group">
+                    <button id="btn-uppercase" class="action-btn secondary-btn" title="Convert all text to uppercase">UPPERCASE</button>
+                    <button id="btn-lowercase" class="action-btn secondary-btn" title="Convert all text to lowercase">lowercase</button>
+                    <button id="btn-clear" class="action-btn danger-btn" title="Clear workspace completely"><i class="fa-regular fa-trash-can"></i> Clear</button>
+                </div>
+                <button id="btn-copy" class="action-btn primary-btn" title="Copy text to clipboard">
+                    <i class="fa-regular fa-copy"></i> Copy Text
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Professional Footer Section -->
+    <footer class="app-footer">
+        <div class="footer-container">
+            <p>&copy; 2026 AnalyticsText Studio. Handcrafted for performance.</p>
+            <div class="footer-links">
+                <a href="#" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> GitHub</a>
+                <a href="#" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
